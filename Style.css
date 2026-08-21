@@ -1,0 +1,293 @@
+/* =====================================================
+   CUSTOM CSS - FSDL EXPERIMENT 1
+   TASK 1 & TASK 2
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    color: #333;
+    margin: 0;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.hotel-header {
+    background: linear-gradient(135deg, #4e7194, #315875);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.hotel-header h1 {
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.hotel-header nav a {
+    border-radius: 20px;
+    padding: 7px 18px;
+    transition: all 0.25s ease;
+}
+
+.hotel-header nav a:hover {
+    background: white;
+    color: #315875;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MAIN SECTION
+   ===================================================== */
+
+main {
+    background: #f4f7fa;
+}
+
+main h2 {
+    color: #294f6b;
+    font-weight: 700;
+}
+
+main h3 {
+    color: #315875;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+   ===================================================== */
+
+.hero-image {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.01);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   INTRODUCTION TEXT
+   ===================================================== */
+
+.lead {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5f6f7a;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TASK 2 - SERVICE CARDS
+   ===================================================== */
+
+.service-card {
+    height: 100%;
+
+    border: none;
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Small coloured line at top of cards */
+
+.service-card::before {
+    content: "";
+
+    display: block;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #315875,
+        #8caec5
+    );
+
+    border-radius: 15px 15px 0 0;
+}
+
+
+/* Card hover effect */
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Service title */
+
+.service-card .card-title {
+    color: #315875;
+    font-weight: 700;
+}
+
+
+/* Service description */
+
+.service-card .card-text {
+    color: #667781;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SERVICE ICONS
+   ===================================================== */
+
+.service-card .card-title::before {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.col-lg:nth-child(1) .card-title::before {
+    content: "📶";
+}
+
+.col-lg:nth-child(2) .card-title::before {
+    content: "🏊";
+}
+
+.col-lg:nth-child(3) .card-title::before {
+    content: "💆";
+}
+
+.col-lg:nth-child(4) .card-title::before {
+    content: "🍽️";
+}
+
+.col-lg:nth-child(5) .card-title::before {
+    content: "🛎️";
+}
+
+
+/* =====================================================
+   TASK 1 - CONTAINER-FLUID SECTION
+   ===================================================== */
+
+.container-fluid.bg-white {
+    background:
+        linear-gradient(
+            135deg,
+            #315875,
+            #4e7194
+        ) !important;
+
+    color: white;
+
+    border: none !important;
+}
+
+
+/* Text inside information section */
+
+.container-fluid.bg-white .row div {
+    padding: 15px;
+
+    font-weight: 600;
+
+    transition: transform 0.25s ease;
+}
+
+.container-fluid.bg-white .row div:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #243f53 !important;
+    color: white;
+
+    box-shadow:
+        0 -4px 12px rgba(0, 0, 0, 0.12);
+}
+
+footer p {
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 767.98px) {
+
+    .hotel-header h1 {
+        font-size: 28px;
+    }
+
+    .hero-image {
+        max-height: 320px;
+    }
+
+    .service-card {
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .hotel-header h1 {
+        font-size: 24px;
+    }
+
+    .hotel-header nav a {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hero-image {
+        max-height: 260px;
+        border-radius: 12px;
+    }
+
+    .lead {
+        font-size: 15px;
+    }
+
+}
